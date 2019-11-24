@@ -1,8 +1,16 @@
 # Alathea
-Using NLP to find the truth in News
+Using NLP to find biases in news.
 
-Politics is becoming more and more polarized by the day. If you switch on any news channel, you will often find very extreme opinions. We named ourselves Team Alathea (the Greek Goddess of truth) because we hope to bring a little more truth into the world. Using Google Clouds Natural Language Processing API, we can perform Sentiment analysis, which analyzes whether the article contains positive or negative emotion (score) and the intensity of the emotion (magnitude.) Our program analyzes said score and magnitude to categorize articles and give warnings to readers if they’re reading only one side of the story.
+*Important Notice: this project is still under developement. Many files have not yet been uploaded, updated, or finalized.*
 
-mix text is the text that would be analyzed and hello.py is the file doing the sentiment analysis
+## Vision
+We live in a very polarized world. Everybody has specialized feeds that reflect their own beliefs and perspectives. People get stuck in echo-chambers, continuously reaffirming their beliefs with like-minded people. Because of this people no longer understand, sympathize, or even respect each other's perspectives. This is the cause of political polarization in the US. Aletheia hopes to change this. Through NLP Aletheia understand the viewpoints of different news articles and informs its users of their biases. Alternative viewpoints are then offered to broaden the perspective of the reader. I believe this process will promote critical thinking among readers and increase sympathy and understanding for other viewpoints.
 
-This repository does not contain the full sourcecode because the `static/` and `templates/` directories contain too many files for me to rapidly push in the hour I have left to submit this project.
+## How it works
+### Overview
+Aletheia uses Natural Language Processing (NLP) to understand the text. This can be broken down into 2 main steps, entity analysis and sentiment analysis. Entity analysis identifies terms in the text, whether it be locations, organizations, people, or objects. It also recognizes the importance of the term to the article as a whole. Then sentiment analysis is used to understand the feelings of the article towards each term. This allows us to build an understanding of the various viewpoints of the article. 
+
+Our findings of each article will then be compared to other articles about the same topic, allowing us to understand extreme viewpoints and direct users towards viewpoints opposing their own.
+
+### Tools 
+This project uses Google's NLP API. This API has great tools for entity analysis, sentiment analysis, content classification, and syntax analysis. 
