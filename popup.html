@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta charset="iso-8859-1">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+    #message {
+        width: 50%;
+        height: 50%;
+        border-color: white;
+    }
+body {    
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 800;
+}
+ 
+#frame {
+    overflow: hidden;
+    width:790;
+    height:324;
+}
+</style>
+</head>
+<body onLoad="">
+    <label>Insert News</label><textarea id="details"></textarea>
+    <input onclick="clicked();" id="clickme" name="myBtn" type="submit" value="click me">
+    <textarea id="message"></textarea>
+    <script type="text/javascript">
+        function clicked() {
+            theDeets = document.getElementById("details").value;
+                    console.log(theDeets);
+                    $.get("/analyze", {
+               text: theDeets
+           })
+        .done(function(result){
+                document.getElementById("message").value = result;
+               console.log(result);
+           });
+        }
+        function scrape(){
+            $("#links").load("/Main_Page #jq-p-Getting-Started li",function() {
+                alert("load was performed");
+            });
+        }
+    </script>
+</body>
+</html>
