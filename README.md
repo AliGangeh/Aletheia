@@ -1,4 +1,4 @@
-# Alathea
+# Alatheia
 Using NLP to find biases in news.
 
 *Important Notice: this project is still under developement. Many files have not yet been uploaded, updated, or finalized.*
